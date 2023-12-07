@@ -38,8 +38,8 @@ def _xprahtml5_urlparams():
     url_params = '?' + '&'.join([
         'username=' + getuser(),
         'password=' + _xprahtml5_passwd,
-        'encryption=AES',
-        'key=' + _xprahtml5_aeskey,
+        #'encryption=AES',
+        #'key=' + _xprahtml5_aeskey,
         'sharing=true',
     ])
 
@@ -117,8 +117,8 @@ def setup_xprahtml5():
         '--start=xterm -fa "DejaVu Sans Mono" -fs 14',
         # '--start-child=xterm', '--exit-with-children',
         '--tcp-auth=file:filename=' + fpath_passwd,
-        '--tcp-encryption=AES',
-        '--tcp-encryption-keyfile=' + fpath_aeskey,
+        #'--tcp-encryption=AES',
+        #'--tcp-encryption-keyfile=' + fpath_aeskey,
         '--clipboard-direction=both',
         '--no-keyboard-sync',  # prevent keys from repeating unexpectedly on high latency
         '--no-mdns',  # do not advertise the xpra session on the local network
